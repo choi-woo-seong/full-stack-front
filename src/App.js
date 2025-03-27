@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React,{useState, useEffect} from 'react';
 import axios from 'axios';
@@ -7,7 +6,7 @@ function App() {
   const [currentTime, setCurrnetTime] = useState('');
 
   useEffect(()=>{
-    axios.get('http://localhost:8080/api/time')
+    axios.get('http://15.164.56.190:8080/api/time')
     .then(response => {
       setCurrnetTime(response.data);
     })
